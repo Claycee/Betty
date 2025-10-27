@@ -1,0 +1,212 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ff5151 0%, #ae20d1 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #764ba2;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .photo-grid .photo-card:last-child {
+            grid-column: 1 / -1;
+            max-width: 400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .photo-card {
+            background: #f5f5f5;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .photo-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .placeholderFoto {
+            width: 100%;
+            height: 200px;
+            background: #ddd;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
+        .photo-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .photo-caption {
+            color: #555;
+            font-size: 0.9em;
+            font-style: italic;
+            margin-top: 5px;
+            display: block;
+        }
+        
+        .message-box {
+            background: linear-gradient(135deg, #770000 35%, #784ba2 75%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .message-box h2 {
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .message-box p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+        .heart {
+            color: #ff6b6b;
+            font-size: 2em;
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* RESPONSIVE IPAD */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .subtitle {
+                font-size: 1em;
+            }
+
+            .photo-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .message-box h2 {
+                font-size: 1.5em;
+            }
+
+            .message-box p {
+                font-size: 1em;
+            }
+        }
+
+        /* RESPONSIVE MOVILES */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 20px 15px;
+                border-radius: 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .subtitle {
+                font-size: 0.9em;
+                margin-bottom: 25px;
+            }
+
+            .photo-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .photo-grid .photo-card:last-child {
+                max-width: 100%;
+            }
+
+            .photo-card {
+                padding: 12px;
+            }
+
+            .photo-card img {
+                height: 250px;
+                margin-bottom: 10px;
+            }
+
+            .photo-caption {
+                font-size: 0.85em;
+                margin-top: 5px;
+            }
+
+            .message-box {
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .message-box h2 {
+                font-size: 1.3em;
+                margin-bottom: 12px;
+            }
+
+            .message-box p {
+                font-size: 0.95em;
+                line-height: 1.5;
+            }
+
+            .heart {
+                font-size: 1.5em;
+            }
+        }
